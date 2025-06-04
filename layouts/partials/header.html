@@ -1,0 +1,22 @@
+<div class="language-switcher">
+    {{ range .Site.Languages }}
+    <a href="{{ $.Permalink | replaceRE "^https://[^/]+" "" | printf "%s%s%s" $.Site.BaseURL .Lang }}" 
+       class="lang-btn{{ if eq .Lang $.Site.Language.Lang }} active{{ end }}">
+        {{ .LanguageName }}
+    </a>
+    {{ end }}
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+</div>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/" class="logo">
+            {{ .Site.Title }}
+        </a>
+        <ul class="nav-menu">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>
