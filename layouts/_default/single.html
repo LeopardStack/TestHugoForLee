@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="article">
+    <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        <div class="article-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ if .Params.tags }}
+            <div class="tags">
+                {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+    
+    {{ if .Params.tech_stack }}
+    <div class="tech-stack">
+        <h3>{{ if eq .Site.Language.Lang "zh" }}技术栈{{ else if eq .Site.Language.Lang "ru" }}Технологии{{ else }}Tech Stack{{ end }}</h3>
+        {{ range .Params.tech_stack }}
+        <span class="tech-tag">{{ . }}</span>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}
