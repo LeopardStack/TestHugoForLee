@@ -1,0 +1,20 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            {{ if eq .Site.Language.Lang "en" }}
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. Building bridges through code.</p>
+            {{ else if eq .Site.Language.Lang "zh" }}
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. 用代码连接世界。</p>
+            {{ else if eq .Site.Language.Lang "ru" }}
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. Соединяю культуры через код.</p>
+            {{ end }}
+            
+            <div class="footer-links">
+                {{ range .Site.Languages }}
+                <a href="{{ $.Permalink | replaceRE "^https://[^/]+" "" | printf "%s%s%s" $.Site.BaseURL .Lang }}" 
+                   class="footer-lang-link">{{ .LanguageName }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>
