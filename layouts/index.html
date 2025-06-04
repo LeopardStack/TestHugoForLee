@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="main-content">
+    <section class="hero">
+        {{ if eq .Site.Language.Lang "en" }}
+        <div>
+            <h1>Full-Stack Developer</h1>
+            <p>Building bridges between cultures through code. Specialized in Russian-Chinese-English multilingual solutions.</p>
+        </div>
+        {{ else if eq .Site.Language.Lang "zh" }}
+        <div>
+            <h1>全栈开发工程师</h1>
+            <p>用代码连接世界，专注于俄中英三语技术解决方案</p>
+        </div>
+        <div class="avatar">👨‍💻</div>
+        {{ else if eq .Site.Language.Lang "ru" }}
+        <div>
+            <h1>Разработчик полного стека</h1>
+            <p>Соединяю культуры через код. Специализируюсь на многоязычных решениях.</p>
+        </div>
+        {{ end }}
+    </section>
+
+    <section class="projects-grid">
+        <div class="project-card">
+            {{ if eq .Site.Language.Lang "en" }}
+            <h3>🌐 Russian-Chinese Translation Tool</h3>
+            <p>AI-powered translation tool for Russian-Chinese language pairs.</p>
+            {{ else if eq .Site.Language.Lang "zh" }}
+            <h3>🌐 俄中翻译工具</h3>
+            <p>专为俄中语言对设计的AI翻译工具。</p>
+            {{ else if eq .Site.Language.Lang "ru" }}
+            <h3>🌐 Русско-китайский переводчик</h3>
+            <p>Инструмент перевода с ИИ для русско-китайской языковой пары.</p>
+            {{ end }}
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">OpenAI</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-links">
+        <a href="{{ .Site.Params.github }}" class="social-btn">
+            <span>📱</span> GitHub
+        </a>
+        {{ if eq .Site.Language.Lang "zh" }}
+        <a href="{{ .Site.Params.zhihu }}" class="social-btn">
+            <span>🤔</span> 知乎
+        </a>
+        {{ else if eq .Site.Language.Lang "ru" }}
+        <a href="{{ .Site.Params.telegram }}" class="social-btn">
+            <span>✈️</span> Telegram
+        </a>
+        {{ else }}
+        <a href="{{ .Site.Params.linkedin }}" class="social-btn">
+            <span>💼</span> LinkedIn
+        </a>
+        {{ end }}
+    </section>
+</div>
+{{ end }}
