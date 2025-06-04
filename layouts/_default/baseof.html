@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" data-lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    
+    <!-- hreflang for SEO -->
+    {{ range .Site.Languages }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ $.Permalink | replaceRE "^https://[^/]+" "" | printf "%s%s%s" $.Site.BaseURL .Lang }}">
+    {{ end }}
+    
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>
