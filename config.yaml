@@ -1,7 +1,7 @@
-baseURL: "https://yourname.github.io"
+baseURL: "https://TestHugoForLee.github.io"
 languageCode: "en"
 defaultContentLanguage: "en"
-title: "Your Name - Multilingual Developer"
+title: "Leopard Stack - Multilingual Developer"
 
 enableRobotsTXT: true
 enableGitInfo: true
@@ -12,7 +12,7 @@ languages:
     languageName: "English"
     languageCode: "en-US"
     weight: 1
-    title: "Your Name - Full-Stack Developer"
+    title: "Leopard Stack - Full-Stack Developer"
     description: "Russian-Chinese-English trilingual developer"
     params:
       theme_color: "#2563eb"
@@ -20,8 +20,8 @@ languages:
       layout_style: "minimal"
       font_family: "Inter"
       card_radius: "8px"
-      github: "https://github.com/yourname"
-      linkedin: "https://linkedin.com/in/yourname"
+      github: "https://github.com/leopardStack"
+      linkedin: "https://linkedin.com/in/leopard"
     menu:
       main:
         - name: "About"
@@ -38,7 +38,7 @@ languages:
     languageName: "中文"
     languageCode: "zh-CN"
     weight: 2
-    title: "你的名字 - 全栈开发工程师"
+    title: "阿龙 - 全栈开发工程师"
     description: "俄中英三语开发者，专注于国际化软件解决方案"
     params:
       theme_color: "#dc2626"
