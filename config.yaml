@@ -1,0 +1,103 @@
+baseURL: "https://yourname.github.io"
+languageCode: "en"
+defaultContentLanguage: "en"
+title: "Your Name - Multilingual Developer"
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+
+languages:
+  en:
+    languageName: "English"
+    languageCode: "en-US"
+    weight: 1
+    title: "Your Name - Full-Stack Developer"
+    description: "Russian-Chinese-English trilingual developer"
+    params:
+      theme_color: "#2563eb"
+      accent_color: "#1d4ed8"
+      layout_style: "minimal"
+      font_family: "Inter"
+      card_radius: "8px"
+      github: "https://github.com/yourname"
+      linkedin: "https://linkedin.com/in/yourname"
+    menu:
+      main:
+        - name: "About"
+          url: "/about/"
+          weight: 1
+        - name: "Projects"
+          url: "/projects/"
+          weight: 2
+        - name: "Blog"
+          url: "/blog/"
+          weight: 3
+
+  zh:
+    languageName: "中文"
+    languageCode: "zh-CN"
+    weight: 2
+    title: "你的名字 - 全栈开发工程师"
+    description: "俄中英三语开发者，专注于国际化软件解决方案"
+    params:
+      theme_color: "#dc2626"
+      accent_color: "#b91c1c"
+      layout_style: "card"
+      font_family: "PingFang SC"
+      card_radius: "12px"
+      github: "https://github.com/yourname"
+      zhihu: "https://zhihu.com/people/yourname"
+    menu:
+      main:
+        - name: "关于我"
+          url: "/about/"
+          weight: 1
+        - name: "项目作品"
+          url: "/projects/"
+          weight: 2
+        - name: "技术博客"
+          url: "/blog/"
+          weight: 3
+
+  ru:
+    languageName: "Русский"
+    languageCode: "ru-RU"
+    weight: 3
+    title: "Ваше имя - Разработчик полного стека"
+    description: "Трёхъязычный разработчик"
+    params:
+      theme_color: "#059669"
+      accent_color: "#047857"
+      layout_style: "sidebar"
+      font_family: "PT Sans"
+      card_radius: "4px"
+      github: "https://github.com/yourname"
+      telegram: "https://t.me/yourname"
+    menu:
+      main:
+        - name: "Обо мне"
+          url: "/about/"
+          weight: 1
+        - name: "Проекты"
+          url: "/projects/"
+          weight: 2
+        - name: "Блог"
+          url: "/blog/"
+          weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "github"
+    lineNos: true
+
+params:
+  version: "1.0.0"
+  author: "Your Name"
+  description: "Multilingual developer portfolio"
+  keywords: ["developer", "multilingual", "international"]
+  enable_language_detection: true
+  github_username: "yourname"
